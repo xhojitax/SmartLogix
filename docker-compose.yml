@@ -1,0 +1,15 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: smartlogix-postgres
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: smartlogix_pedidos
+
+    ports:
+      - "5432:5432"
+
+    restart: always
